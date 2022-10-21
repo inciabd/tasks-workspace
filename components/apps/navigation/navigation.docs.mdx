@@ -1,0 +1,68 @@
+---
+description: A Navigation component.
+---
+
+import { Navigation } from './navigation';
+
+A component that renders the logo of the website
+
+### Component props
+```js
+menuItems?: any;    
+```
+
+### Component usage
+Define & use your links
+```js
+const menuItems: {logoComponent: object[], links: ItemType[], buttonComponents: object[]} = {
+  logoComponent: [
+    {
+      logo: import image name here,
+      title: "title here",
+      width: 10
+    }
+  ],
+  links : [
+    {
+      label: (
+        <a href="#" rel="noreferrer">
+          link title
+        </a>
+      ),
+      key: 'questions',
+      icon: <QuestionCircleOutlined />,
+    },
+    {
+      label: (
+        <a href="#" rel="noreferrer">
+          link title
+        </a>
+      ),
+      key: 'public-consultations',
+      icon: <CheckCircleOutlined />,
+    }
+  ],
+  buttonComponents: [
+    {
+      title: "Search",
+      type:"primary",
+      icon: <SearchOutlined />
+    },
+    {
+      title: "login",
+      type: "link",
+      icon: ""
+    }
+  ]
+}
+
+  <Navigation menuItems={menuItems} />
+```
+
+### Live Playground
+
+Modify the text to see it change live:
+
+```js live
+
+```
